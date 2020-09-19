@@ -74,11 +74,6 @@
           </van-grid>
         </div>
 
-        <!--<van-image  round class="courseItemImages" fit="cover" style="width: 30px;height: 30px" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1600339908249&di=34fc51f5f466ba577f4b9bd3c187ab34&imgtype=0&src=http%3A%2F%2Fwww.tianzhumedia.com%2Fuploads%2Fallimg%2F160707%2F1-160FG62TJ45.jpg">
-          <template v-slot:loading>
-            <van-loading type="spinner" size="20" />
-          </template>
-        </van-image>-->
       </van-cell>
     </van-cell-group>
 
