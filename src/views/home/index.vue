@@ -12,10 +12,10 @@
 
   <van-grid :column-num="3" style="margin: 7px 0px">
     <van-grid-item icon="photo-o" text="课程表" to="/index/courseList" />
-    <van-grid-item icon="photo-o" text="课堂点评" />
-    <van-grid-item icon="photo-o" text="请假申请" />
+    <van-grid-item icon="photo-o" text="课堂点评" to="/index/courseAppraise" />
+    <van-grid-item icon="photo-o" text="请假申请" to="/index/leaveList" />
     <van-grid-item icon="photo-o" text="课耗记录" />
-    <van-grid-item icon="photo-o" text="作业练习" />
+    <van-grid-item icon="photo-o" text="作业练习" to="/index/workList"/>
     <van-grid-item icon="photo-o" text="校长信箱" />
   </van-grid>
 

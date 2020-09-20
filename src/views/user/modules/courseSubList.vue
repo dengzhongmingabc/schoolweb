@@ -1,13 +1,5 @@
 <template>
   <div class="container">
-    <van-calendar
-      style="border-bottom: 1px #F2F2F2 solid"
-      title="日历"
-      :show-title="false"
-      :poppable="false"
-      :show-confirm="false"
-      :style="{ height: '355px'}"
-    />
     <div class="dataList">
       <van-list
         v-model="loading"
@@ -20,8 +12,11 @@
           </van-cell>
           <van-cell title="学员：李源" >
             <template #label>
-              <div>地址：科技二路</div>
-              <div>时间：2020-02-02 16：30</div>
+
+              <div class="appr">
+                <div class="appr_desc">教师：赵教师</div>
+              </div>
+              <div class="appr_desc_text">剩余课时：20节</div>
             </template>
           </van-cell>
         </van-cell-group>
@@ -46,6 +41,7 @@
         loading: false,
         active: 0,
         finished: false,
+        value: 3,
         code: ''
       }
     },
@@ -75,5 +71,15 @@
   }
   .dataList{
     margin-top: 15px;
+  }
+  .appr{
+    display: flex;
+
+  }
+  .appr_desc{
+    margin-top: 3px;
+  }
+  .appr_desc_text{
+    margin-top: 12px;
   }
 </style>

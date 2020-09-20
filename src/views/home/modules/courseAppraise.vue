@@ -1,13 +1,5 @@
 <template>
   <div class="container">
-    <van-calendar
-      style="border-bottom: 1px #F2F2F2 solid"
-      title="日历"
-      :show-title="false"
-      :poppable="false"
-      :show-confirm="false"
-      :style="{ height: '355px'}"
-    />
     <div class="dataList">
       <van-list
         v-model="loading"
@@ -20,8 +12,12 @@
           </van-cell>
           <van-cell title="学员：李源" >
             <template #label>
-              <div>地址：科技二路</div>
-              <div>时间：2020-02-02 16：30</div>
+
+              <div class="appr">
+                <div class="appr_desc">评分：</div>
+                <van-rate v-model="value" color="#ffd21e" readonly />
+              </div>
+              <div class="appr_desc_text">赵教师：点评于2020-02-02 16：30</div>
             </template>
           </van-cell>
         </van-cell-group>
@@ -33,10 +29,6 @@
 
 <script>
 
-  import Vue from 'vue'
-  import { Calendar } from 'vant'
-
-  Vue.use(Calendar)
   export default {
     name: 'courseList',
     data() {
@@ -46,6 +38,7 @@
         loading: false,
         active: 0,
         finished: false,
+        value: 3,
         code: ''
       }
     },
@@ -75,5 +68,15 @@
   }
   .dataList{
     margin-top: 15px;
+  }
+  .appr{
+    display: flex;
+
+  }
+  .appr_desc{
+    margin-top: 3px;
+  }
+  .appr_desc_text{
+    margin-top: 12px;
   }
 </style>

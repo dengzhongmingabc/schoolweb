@@ -27,6 +27,46 @@ const routes = [
       keepAlive: true
     }
   },
+  // 课堂点评
+  {
+    path: '/index/courseAppraise',
+    name: 'CourseAppraise',
+    component: () => import('@/views/home/modules/courseAppraise'),
+    meta: {
+      title: '课堂点评',
+      keepAlive: true
+    }
+  },
+// 请假申请
+  {
+    path: '/index/leaveList',
+    name: 'LeaveList',
+    component: () => import('@/views/home/modules/leaveList'),
+    meta: {
+      title: '请假申请',
+      keepAlive: true
+    }
+  },
+  // 作业列表
+  {
+    path: '/index/workList',
+    name: 'WorkList',
+    component: () => import('@/views/home/modules/workList'),
+    meta: {
+      title: '作业列表',
+      //keepAlive: true
+    }
+  },
+  // 交易记录
+  {
+    path: '/user/balanceList',
+    name: 'BalanceList',
+    component: () => import('@/views/user/modules/balanceList'),
+    meta: {
+      title: '交易记录',
+      //keepAlive: true
+    }
+  },
   // 登录
   {
     path: '/login',
@@ -65,6 +105,16 @@ const routes = [
     meta: {
       title: '我的',
       showTab: true
+    }
+  },
+  // 报读课程
+  {
+    path: '/user/courseSubList',
+    name: 'CourseSubList',
+    component: () => import('@/views/user/modules/courseSubList'),
+    meta: {
+      title: '报读课程',
+      keepAlive: true
     }
   },
   {
