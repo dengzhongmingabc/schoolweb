@@ -82,7 +82,6 @@
       <van-cell title="报读课程" is-link to="/user/courseSubList" />
       <van-cell title="交易记录" is-link url="/user/balanceList" />
       <van-cell title="课耗记录" is-link to="index" />
-      <van-cell title="路由跳转" is-link to="index" />
     </van-cell-group>
 
     <div >

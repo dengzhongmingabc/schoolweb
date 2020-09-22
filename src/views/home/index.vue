@@ -10,7 +10,7 @@
     </div>
   </div>
 
-  <van-grid :column-num="3" style="margin: 7px 0px">
+  <van-grid clickable :column-num="3" style="margin: 7px 0px">
     <van-grid-item icon="photo-o" text="课程表" to="/index/courseList" />
     <van-grid-item icon="photo-o" text="课堂点评" to="/index/courseAppraise" />
     <van-grid-item icon="photo-o" text="请假申请" to="/index/leaveList" />
@@ -31,7 +31,7 @@
     >
       <van-cell  value="内容"  v-for="item in list" :key="item"  style="margin-top: 5px">
         <template #default >
-          <div class="courseItem">
+          <div class="courseItem" @click="toDetail">
             <van-image class="courseItemImages" fit="cover" style="width: 110px;height: 110px" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1600339908249&di=34fc51f5f466ba577f4b9bd3c187ab34&imgtype=0&src=http%3A%2F%2Fwww.tianzhumedia.com%2Fuploads%2Fallimg%2F160707%2F1-160FG62TJ45.jpg">
               <template v-slot:loading>
                 <van-loading type="spinner" size="20" />
@@ -84,6 +84,9 @@
 
     methods: {
 
+      toDetail(){
+        this.$router.push({path:'/index/courseDetail'})
+      },
       onLoad() {
         // 异步更新数据
         // setTimeout 仅做示例，真实场景中一般为 ajax 请求

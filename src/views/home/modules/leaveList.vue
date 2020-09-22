@@ -31,7 +31,7 @@
       </van-list>
     </div>
 
-    <div class="mybutton">
+    <div class="mybutton" @click="toLeave">
       <div class="icon_my" style="padding-top: 3px;margin-left: 7px;"><van-icon name="plus" /></div>
       <div class="text_my" >请假</div>
     </div>
@@ -55,6 +55,9 @@
       }
     },
     methods: {
+      toLeave(){
+        this.$router.push({path:'/LeaveList/leave'})
+      },
       onLoad() {
         // 异步更新数据
         // setTimeout 仅做示例，真实场景中一般为 ajax 请求

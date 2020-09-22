@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <van-tabs v-model="activeName" animated color="#07c160" >
-      <van-tab title="通知" name="a">
+      <van-tab title="通知" name="a" badge="5">
         <div class="footer">
           <van-list
             v-model="loading"
@@ -11,9 +11,14 @@
           >
 
             <van-cell-group v-for="item in list" :key="item"  style="margin-top: 5px" >
-              <van-cell title="通知">
-                <template #default >
-                  <van-icon name="arrow" />
+              <van-cell title="通知" is-link to="/info/detail">
+                <template #title>
+                  <div class="info-title">
+                    <span class="custom-title">通知</span>
+                    <div class="tag-my">新</div>
+                  </div>
+
+                 <!-- <van-tag type="danger" round mark>新</van-tag>-->
                 </template>
               </van-cell>
               <van-cell title="学员：李源" label="描述信息描述信息描述信息描述信息描述信息描述信息描述信息描述信息描述信息" />
@@ -73,6 +78,25 @@ export default {
 <style  scoped>
   .container{
     background-color: #F2F2F2;
+  }
+
+  .info-title{
+    position: relative;
+    width: 60px;
+  }
+
+  .tag-my{
+    position: absolute;
+    background-color: red;
+    top:-15px;
+    left: 40px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 15px;
+    color: white;
+    font-size: 22px;
   }
 
 </style>

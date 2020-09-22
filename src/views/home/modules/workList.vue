@@ -10,7 +10,7 @@
             @load="onLoad"
           >
             <van-cell-group v-for="item in list" :key="item" style="margin-top: 5px">
-              <van-cell title="请假申请">
+              <van-cell title="请假申请" @click="toDetail">
                 <template #default>
                   <van-tag  type="success" size="large">已提交</van-tag>
                 </template>
@@ -60,6 +60,9 @@
       }
     },
     methods: {
+      toDetail(){
+        this.$router.push({path:'/workList/detail'})
+      },
       onLoad() {
         // 异步更新数据
         // setTimeout 仅做示例，真实场景中一般为 ajax 请求

@@ -3,7 +3,7 @@
     <div class="tabbar">
       <van-tabbar v-model="active" :active-color="variables.theme" :fixed="false" route>
         <van-tabbar-item to="/" icon="wap-home">首页</van-tabbar-item>
-        <van-tabbar-item to="/info" icon="bars">消息</van-tabbar-item>
+        <van-tabbar-item to="/info" icon="bars" badge="5">消息</van-tabbar-item>
         <!--<van-tabbar-item to="/cart" icon="shopping-cart">购物车</van-tabbar-item>-->
         <van-tabbar-item to="/user" icon="manager">我的</van-tabbar-item>
       </van-tabbar>

@@ -17,6 +17,16 @@ const routes = [
       keepAlive: true
     }
   },
+  // 课程详情
+  {
+    path: '/index/courseDetail',
+    name: 'CourseDetail',
+    component: () => import('@/views/home/detail/courseDetail'),
+    meta: {
+      title: '课程详情',
+      keepAlive: true
+    }
+  },
   // 课程表
   {
     path: '/index/courseList',
@@ -27,7 +37,7 @@ const routes = [
       keepAlive: true
     }
   },
-  // 课堂点评
+  // 课堂点评列表
   {
     path: '/index/courseAppraise',
     name: 'CourseAppraise',
@@ -37,11 +47,31 @@ const routes = [
       keepAlive: true
     }
   },
-// 请假申请
+  // 课堂点评详情
+  {
+    path: '/courseAppraise/detail',
+    name: 'ApprDetail',
+    component: () => import('@/views/home/detail/apprDetail'),
+    meta: {
+      title: '点评详情',
+      keepAlive: true
+    }
+  },
+// 请假申请列表
   {
     path: '/index/leaveList',
     name: 'LeaveList',
     component: () => import('@/views/home/modules/leaveList'),
+    meta: {
+      title: '请假列表',
+      keepAlive: true
+    }
+  },
+  // 请假申请
+  {
+    path: '/LeaveList/leave',
+    name: 'Leave',
+    component: () => import('@/views/home/detail/leave'),
     meta: {
       title: '请假申请',
       keepAlive: true
@@ -57,6 +87,16 @@ const routes = [
       //keepAlive: true
     }
   },
+  // 写作业
+  {
+    path: '/workList/detail',
+    name: 'WorkDetail',
+    component: () => import('@/views/home/detail/workDetail'),
+    meta: {
+      title: '写作业',
+      keepAlive: true
+    }
+  },
   // 交易记录
   {
     path: '/user/balanceList',
@@ -67,34 +107,14 @@ const routes = [
       //keepAlive: true
     }
   },
-  // 登录
+  // 交易记录详情
   {
-    path: '/login',
-    name: 'Login',
-    component: () => import('@/views/auth/login'),
+    path: '/balance/detail',
+    name: 'BalanceDetail',
+    component: () => import('@/views/user/detail/balanceDetail'),
     meta: {
-      title: '登录'
-    }
-  },
-  // 分类
-  {
-    path: '/category',
-    name: 'Category',
-    component: () => import('@/views/category'),
-    meta: {
-      title: '分类',
-      showTab: true,
-      keepAlive: true
-    }
-  },
-  // 购物车
-  {
-    path: '/cart',
-    name: 'Cart',
-    component: () => import('@/views/cart'),
-    meta: {
-      title: '购物车',
-      showTab: true
+      title: '记录详情',
+      //keepAlive: true
     }
   },
   // 我的
@@ -126,79 +146,14 @@ const routes = [
       showTab: true
     }
   },
-  // 商品列表
+  // 消息详情
   {
-    path: '/product',
-    name: 'Product',
-    component: () => import('@/views/product'),
-    meta: {
-      title: '商品列表',
-      keepAlive: true
-    }
-  },
-  // 商品详情
-  {
-    path: '/detail',
+    path: '/info/detail',
     name: 'Detail',
-    component: () => import('@/views/detail'),
+    component: () => import('@/views/info/detail/infoDetail'),
     meta: {
-      title: '商品详情',
+      title: '消息详情',
       keepAlive: true
-    }
-  },
-  // 地址管理
-  {
-    path: '/address',
-    name: 'Address',
-    component: () => import('@/views/address/list'),
-    meta: {
-      title: '地址管理'
-    }
-  },
-  // 地址编辑
-  {
-    path: '/address/edit',
-    name: 'AddressEdit',
-    component: () => import('@/views/address/edit'),
-    meta: {
-      title: '地址编辑'
-    }
-  },
-  // 搜索
-  {
-    path: '/search',
-    name: 'Search',
-    component: () => import('@/views/search'),
-    meta: {
-      title: '搜索'
-    }
-  },
-  // 搜索结果
-  {
-    path: '/search/list',
-    name: 'SearchList',
-    component: () => import('@/views/search/list'),
-    meta: {
-      title: '搜索结果'
-    }
-  },
-  // 确认订单
-  {
-    path: '/order/confirm',
-    name: 'OrderConfirm',
-    component: () => import('@/views/order/confirm'),
-    meta: {
-      title: '确认订单',
-      keepAlive: true
-    }
-  },
-  // 订单列表
-  {
-    path: '/order/list',
-    name: 'OrderList',
-    component: () => import('@/views/order/list'),
-    meta: {
-      title: '订单列表'
     }
   }
 ]

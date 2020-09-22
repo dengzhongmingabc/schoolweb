@@ -8,7 +8,7 @@
         @load="onLoad"
       >
         <van-cell-group v-for="item in list" :key="item" style="margin-top: 5px">
-          <van-cell title="绘画二级" is-link>
+          <van-cell title="绘画二级" is-link to="/courseAppraise/detail">
           </van-cell>
           <van-cell title="学员：李源" >
             <template #label>
